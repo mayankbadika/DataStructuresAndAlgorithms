@@ -1,2 +1,0 @@
-# DataStructuresAndAlgorithms
-Practice DSA
