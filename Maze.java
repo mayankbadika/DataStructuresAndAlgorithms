@@ -31,13 +31,13 @@ public class Maze {
            System.out.println("No Solution");
            return false;
        }
-       printsol(sol);
        return true;
    }
     
     public boolean solveMazeUtil(int[][] maze,int x,int y,int[][] sol){
         if(x==N-1&y==N-1){ // if reached the end point of the matrix we are done
             sol[x][y]=1;
+            printsol(sol);
             return true;
         }
         
@@ -45,14 +45,10 @@ public class Maze {
             sol[x][y]=1;
             
             // Move in the x direction
-            if(solveMazeUtil(maze,x+1,y,sol)){
-                return true;
-            }
-            
+            solveMazeUtil(maze,x+1,y,sol);
+
             //Move in the y direction
-            if(solveMazeUtil(maze,x,y+1,sol)){
-                return true;
-            }
+            solveMazeUtil(maze,x,y+1,sol);
             
             sol[x][y]=0;
             return false;

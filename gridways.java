@@ -29,7 +29,7 @@ public class gridways {
 
     public static void main(String[] args){
         gridways obj = new gridways();
-        //System.out.println(obj.ways(2,3));
+        System.out.println(obj.ways(2,3));
         System.out.println(obj.waysdp(18,18));
     }
 }

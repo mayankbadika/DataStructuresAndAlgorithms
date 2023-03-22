@@ -42,7 +42,7 @@ public class MergeArray {
                 k++;j++;
             }
         }
-        
+        // filling out the remaining array elements to the new array
         while(j<m){
             arr[k]=a2[j];
             k++;j++;
