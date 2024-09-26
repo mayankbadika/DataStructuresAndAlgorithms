@@ -15,7 +15,6 @@ public class minWindow {
 
         for(Character s :pat.toCharArray()){
             map_pat[s]++;
-
         }
         char currchar;
 
@@ -50,9 +49,5 @@ public class minWindow {
         minWindow obj = new minWindow();
         System.out.println(obj.patternSearch(input,pat));
     }
-
-
-
-
 
 }

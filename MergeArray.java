@@ -31,7 +31,8 @@ public class MergeArray {
         int[] arr = new int[n+m];
         
         int i=0,j=0,k=0;
-        
+
+        // checking i & j in while loop because those elements values will be compared . Therefore,  not using k for this reason
         while(i<n&&j<m){
             if(a1[i]<a2[j]){
                 arr[k]=a1[i];

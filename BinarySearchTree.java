@@ -37,7 +37,7 @@ public class BinarySearchTree { // Binary Search tree
     public node search(node root,int data){
         if(root ==null|| root.data==data)
             return root;
-        if(root.data>data)
+        if(root.data > data)
             return search(root.leftchild,data);
    
             return search(root.rightchild,data);   
