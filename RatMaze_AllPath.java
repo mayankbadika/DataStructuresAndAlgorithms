@@ -40,22 +40,18 @@ public class RatMaze_AllPath {
         return true;
     }
     
-     boolean solveMaze(int maze[][]) 
+     void solveMaze(int maze[][])
     {
-        if(solveMazeUtil(maze,0,0,sol)==false){
-            System.out.print("Solution doesn't exist"); 
-            return false; 
-        } 
         
         //printSolution(sol);
-        return solveMazeUtil(maze,0,0,sol);
+         solveMazeUtil(maze,0,0,sol);
     }
      
-    boolean solveMazeUtil(int[][]maze,int x,int y,int[][] sol){
+    void solveMazeUtil(int[][]maze,int x,int y,int[][] sol){
         if(x==N-1 && y==N-1){
             sol[x][y]=1;
             printSolution(sol);
-            return true;
+            return;
         }
         
         if(isSafe(maze,x,y)){
@@ -69,9 +65,7 @@ public class RatMaze_AllPath {
             solveMazeUtil(maze,x,y+1,sol);
             // if nothing works mark the cell as 0
             sol[x][y]=0;
-            return false;
         }
-        return false;
     } 
      
      
@@ -92,7 +86,7 @@ public class RatMaze_AllPath {
 
 
 
-       System.out.println(rat.solveMaze(maze));
+        rat.solveMaze(maze);
     } 
     
 }
